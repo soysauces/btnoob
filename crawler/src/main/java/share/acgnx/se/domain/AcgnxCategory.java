@@ -15,10 +15,10 @@ import java.util.Date;
 public class AcgnxCategory {
 
     private int id;
-    private String createAt;
+    private Date createAt;
     private String category;
     private String sourceName;
-    private BigDecimal size;
+    private String size;
     private String sourceUrl;
     private String fluxLingage;
     private int uploadNo;
@@ -51,11 +51,11 @@ public class AcgnxCategory {
         this.id = id;
     }
 
-    public String getCreateAt() {
+    public Date getCreateAt() {
         return createAt;
     }
 
-    public void setCreateAt(String createAt) {
+    public void setCreateAt(Date createAt) {
         this.createAt = createAt;
     }
 
@@ -75,11 +75,11 @@ public class AcgnxCategory {
         this.sourceName = sourceName;
     }
 
-    public BigDecimal getSize() {
+    public String getSize() {
         return size;
     }
 
-    public void setSize(BigDecimal size) {
+    public void setSize(String size) {
         this.size = size;
     }
 
@@ -121,5 +121,23 @@ public class AcgnxCategory {
 
     public void setCreator(String creator) {
         this.creator = creator;
+    }
+
+    @Override
+    public String toString() {
+        return "AcgnxCategory{" +
+                "id=" + id +
+                ", createAt=" + createAt +
+                ", category='" + category + '\'' +
+                ", sourceName='" + sourceName + '\'' +
+                ", size='" + size + '\'' +
+                ", sourceUrl='" + sourceUrl + '\'' +
+                ", fluxLingage='" + fluxLingage + '\'' +
+                ", uploadNo=" + uploadNo +
+                ", downloadNo=" + downloadNo +
+                ", completeNo=" + completeNo +
+                ", hash='" + hash + '\'' +
+                ", creator='" + creator + '\'' +
+                '}';
     }
 }
