@@ -16,7 +16,7 @@ public class BeginCrawft implements PageProcessor {
     public void process(Page page) {
         int total=Integer.valueOf(page.getHtml().xpath("//*[@id=\"btm\"]/div[8]/div[2]/a[5]/text()").toString());
         System.out.println(total);
-        for (int i=1;i<=total;i++){
+        for (int i=1;i<=1;i++){
             new ClimbCategory().nextPage(i);
             System.out.println(i);
         }
