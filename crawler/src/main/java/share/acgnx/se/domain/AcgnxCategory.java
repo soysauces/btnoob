@@ -15,7 +15,7 @@ import java.util.Date;
 public class AcgnxCategory {
 
     private int id;
-    private Date createAt;
+    private String createAt;
     private String category;
     private String sourceName;
     private String size;
@@ -51,11 +51,11 @@ public class AcgnxCategory {
         this.id = id;
     }
 
-    public Date getCreateAt() {
+    public String getCreateAt() {
         return createAt;
     }
 
-    public void setCreateAt(Date createAt) {
+    public void setCreateAt(String createAt) {
         this.createAt = createAt;
     }
 

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="share.acgnx.se.mapper.CategoryMapper">
+
+    <!--
+        type: 结果集映射的java对象或者是别名
+        id：是resultMap的唯一标识
+        autoMapping：自动映射没有定义的映射关系的属性和字段，默认开启
+     -->
+    <resultMap type="share.acgnx.se.domain.AcgnxCategory" id="categoryResultMap">
+        <!--
+            column: 表中字段名
+            property：对象中的属性名
+         -->
+        <id column="id" property="id"/>
+        <result column="create_at" property="createAt" javaType="java.util.Date" jdbcType="java.sql.Timestamp"/>
+        <result column="category" property="category"/>
+        <result column="source_name" property="sourceName"/>
+        <result column="size" property="size"/>
+        <result column="source_url" property="sourceUrl"/>
+        <result column="flux_lingage" property="fluxLingage"/>
+        <result column="upload_no" property="uploadNo"/>
+        <result column="download_no" property="downloadNo"/>
+        <result column="complete_no" property="completeNo"/>
+        <result column="hash" property="hash"/>
+        <result column="creator" property="creator"/>
+
+    </resultMap>
+
+    <select id="queryUserById" parameterType="Long" resultMap="userResultMap">
+        SELECT* FROM noob_category_list WHERE id = #{id}
+    </select>
+
+</mapper>
